@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Michael Campbell</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script>
+	$(function () {
+		$('nav li ul').hide().removeClass('fallback');
+		$('nav li').hover(function () {
+			$('ul', this).stop().slideToggle(200);
+		});
+	});
+	</script>
+</head>
+<body>
+<div class="wrapper">
+	<div class="blue">
+	<nav>
+  		<ul>
+    		<li>
+    			<a href="#">Link 1</a>
+    		</li>
+    		<li>
+      			<a href="#">Link 2</a>
+      				<ul class="fallback">
+        				<li>
+        					<a href="#">Sub-Link 1</a>
+        				</li>
+        				<li>
+        					<a href="#">Sub-Link 2</a>
+        				</li>
+        				<li>
+        					<a href="#">Sub-Link 3</a>
+        				</li>
+      				</ul>
+    		</li>
+    		<li>
+      			<a href="#">Link 3</a>
+      				<ul class="fallback">
+        				<li>
+        					<a href="#">Sub-Link 1</a>
+        				</li>
+        				<li>
+        					<a href="#">Sub-Link 2</a>
+        				</li>
+        				<li>
+        					<a href="#">Sub-Link 3</a>
+        				</li>
+        				<li>
+        					<a href="#">Sub-Link 4</a>
+        				</li>
+      				</ul>
+    		</li>
+    		<li>
+    			<a href="#">Link 4</a>
+    		</li>
+    		<li>
+    			<a href="#">Link 5</a>
+    		</li>
+    		<li>
+    			<a href="#">Link 6</a>
+    		</li>
+  		</ul>
+	</nav>
+	</div>
+</div>

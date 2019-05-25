@@ -1,0 +1,1004 @@
+/*
+Reset
+http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/*
+HTML5 display-role reset for older browsers
+*/
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+ 	background-color: #d8d8d8;
+}
+
+footer {
+	width: 100%;
+	float: left;
+	background-color: #7f7f7f;
+}
+
+a {
+ 	color: #ffffff;
+ 	text-decoration: none;
+ 	font-family: 'Source Sans Pro';
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../fonts/transfonter.org-20151207-145924/SourceSansPro-SemiboldIt.eot');
+	src: url('../fonts/transfonter.org-20151207-145924/SourceSansPro-SemiboldIt.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/transfonter.org-20151207-145924/SourceSansPro-SemiboldIt.woff') format('woff'),
+		url('../fonts/transfonter.org-20151207-145924/SourceSansPro-SemiboldIt.ttf') format('truetype');
+	font-weight: 600;
+	font-style: italic;
+}
+
+.wrapper {
+ 	width: 50%;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	margin-top: -8px;
+ 	background-color: #f96305;
+}
+
+/*Header Styles*/
+
+.logologin {
+ 	width: 100%;
+ 	float: left;
+ 	background-color: #ff751f;
+}
+
+.toplinks a {
+ 	color: #ffffff;
+ 	float: left;
+ 	font-size: 2em;
+}
+
+.toplinks a:hover {
+  	text-decoration: underline;
+}
+
+/* The Nav Bar */
+
+#cssmenu {
+  position: relative;
+  height: 50px;
+  background: #ac4403;
+  width: 100%;
+  float: left;
+  margin-bottom: 30px;
+}
+
+#cssmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+#cssmenu > ul {
+  position: relative;
+  display: block;
+  background: #ac4403;
+  width: 100%;
+  z-index: 500;
+}
+
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+
+#cssmenu.align-center ul {
+  text-align: center;
+}
+
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+
+#cssmenu > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 24%;
+  text-align: left;
+}
+
+#cssmenu > ul > #menu-button {
+  display: none;
+}
+
+#cssmenu ul li a {
+  display: block;
+  font-family: 'Source Sans Pro';
+  text-decoration: none;
+}
+
+#cssmenu > ul > li > a {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 32px;
+}
+
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+}
+
+#cssmenu li.has-sub::after {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+#cssmenu > ul > li.has-sub::after {
+  right: 10px;
+  top: 20px;
+  border: 5px solid transparent;
+  border-top-color: #7a8189;
+}
+
+#cssmenu > ul > li:hover::after {
+  border-top-color: #ffffff;
+}
+
+#indicatorContainer {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#pIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  z-index: -2;
+  -webkit-transition: left .25s ease;
+  -moz-transition: left .25s ease;
+  -ms-transition: left .25s ease;
+  -o-transition: left .25s ease;
+  transition: left .25s ease;
+}
+
+#cIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  top: -12px;
+  right: 100%;
+  z-index: -2;
+}
+
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 70px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, top .25s ease;
+  -moz-transition: opacity .3s ease, top .25s ease;
+  -ms-transition: opacity .3s ease, top .25s ease;
+  -o-transition: opacity .3s ease, top .25s ease;
+  transition: opacity .3s ease, top .25s ease;
+  z-index: 1000;
+}
+
+#cssmenu ul ul ul {
+  top: 37px;
+  padding-left: 5px;
+}
+
+#cssmenu ul ul li {
+  position: relative;
+}
+
+#cssmenu > ul > li:hover > ul {
+  left: auto;
+  top: 55px;
+  opacity: 1;
+}
+
+#cssmenu.align-right > ul > li:hover > ul {
+  left: auto;
+  right: 0;
+  opacity: 1;
+}
+
+#cssmenu ul ul li:hover > ul {
+  left: 170px;
+  top: 0;
+  opacity: 1;
+}
+
+#cssmenu.align-right ul ul li:hover > ul {
+  left: auto;
+  right: 170px;
+  top: 0;
+  opacity: 1;
+  padding-right: 5px;
+}
+
+#cssmenu ul ul li a {
+  width: 130px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #000000;
+  background: #ffffff;
+}
+
+#cssmenu.align-right ul ul li a {
+  text-align: right;
+}
+
+#cssmenu ul ul li:hover > a {
+  background: #f2f2f2;
+  color: #8c9195;
+}
+
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last > a {
+  border-bottom: 0;
+}
+
+#cssmenu > ul > li > ul::after {
+  content: '';
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #ffffff;
+  position: absolute;
+  top: -12px;
+  left: 30px;
+}
+
+#cssmenu.align-right > ul > li > ul::after {
+  left: auto;
+  right: 30px;
+}
+
+#cssmenu ul ul li.has-sub::after {
+  border: 4px solid transparent;
+  border-left-color: #9ea2a5;
+  right: 10px;
+  top: 12px;
+}
+
+#cssmenu.align-right ul ul li.has-sub::after {
+  border-left-color: transparent;
+  border-right-color: #9ea2a5;
+  right: auto;
+  left: 10px;
+}
+
+#cssmenu ul ul li.has-sub:hover::after {
+  border-left-color: #ffffff;
+  right: -5px;
+}
+
+#cssmenu.align-right ul ul li.has-sub:hover::after {
+  border-right-color: #ffffff;
+  border-left-color: transparent;
+  left: -5px;
+}
+
+@media all and (max-width: 800px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  
+#cssmenu {
+    width: auto;
+}
+
+#cssmenu.align-center ul {
+    text-align: left;
+}
+
+#cssmenu.align-right > ul > li {
+    float: none;
+}
+
+#cssmenu ul {
+    width: auto;
+}
+
+#cssmenu .submenuArrow,
+#cssmenu #indicatorContainer {
+    display: none;
+}
+
+#cssmenu > ul {
+    height: auto;
+    display: block;
+}
+
+#cssmenu > ul > li {
+    float: none;
+}
+
+#cssmenu li,
+#cssmenu > ul > li {
+    display: none;
+}
+
+#cssmenu ul ul,
+#cssmenu ul ul ul,
+#cssmenu ul > li:hover > ul,
+#cssmenu ul ul > li:hover > ul,
+#cssmenu.align-right ul ul,
+#cssmenu.align-right ul ul ul,
+#cssmenu.align-right ul > li:hover > ul,
+#cssmenu.align-right ul ul > li:hover > ul {
+    position: relative;
+    left: auto;
+    top: auto;
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+    right: auto;
+}
+
+#cssmenu ul .has-sub::after {
+    display: none;
+}
+
+#cssmenu ul li a {
+    padding: 12px 20px;
+}
+
+#cssmenu ul ul li a {
+    border: 0;
+    background: none;
+    width: auto;
+    padding: 8px 35px;
+}
+
+#cssmenu.align-right ul ul li a {
+    text-align: left;
+}
+
+#cssmenu ul ul li:hover > a {
+    background: none;
+    color: #8c9195;
+}
+
+#cssmenu ul ul ul a {
+    padding: 8px 50px;
+}
+
+#cssmenu ul ul ul ul a {
+    padding: 8px 65px;
+}
+
+#cssmenu ul ul ul ul ul a {
+    padding: 8px 80px;
+}
+
+#cssmenu ul ul ul ul ul ul a {
+    padding: 8px 95px;
+}
+
+#cssmenu > ul > #menu-button {
+    display: block;
+    cursor: pointer;
+}
+
+#cssmenu #menu-button > a {
+    padding: 14px 20px;
+}
+
+#cssmenu ul.open li,
+#cssmenu > ul.open > li {
+    display: block;
+}
+
+#cssmenu > ul.open > li#menu-button > a {
+    color: #fff;
+    border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+#cssmenu ul ul::after {
+    display: none;
+}
+
+#cssmenu #menu-button::after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #7a8189;
+    border-bottom: 2px solid #7a8189;
+    right: 20px;
+    top: 15px;
+}
+
+#cssmenu #menu-button::before {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 22px;
+    border-top: 2px solid #7a8189;
+    right: 20px;
+    top: 25px;
+}
+
+#cssmenu ul.open #menu-button::after,
+#cssmenu ul.open #menu-button::before {
+    border-color: #fff;
+}
+
+}
+
+/*Page Styles*/
+
+.content {
+	background-color: #f96305;
+	width: 100%;
+	float: left;
+	margin-top: -30px;
+	padding-top: 5%;
+}
+
+#banner {
+	width: 100%;
+	float: left;
+	margin-bottom: 3%;
+}
+
+.homegames {
+	width: 100%;
+	float: left;
+}
+
+.hometitle {
+	width: 85%;
+	float: left;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 3em;
+	padding-left: 5%;
+	padding-bottom: 1%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 3%;
+	border-bottom: 3px solid #05f2f9;
+}
+
+.gamebox {
+	float: left;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+
+.gamesection {
+	width: 23%;
+	float: left;
+	margin-left: 2%;
+	margin-left: 2%;
+}
+
+.gamesectionimage {
+	width: 100%;
+	float: left;
+}
+
+.gamesectiontitle {
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	text-align: center;
+	float: left;
+	width: 100%;
+	font-size: 1.5em;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.gamesectionprice {
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	text-align: center;
+	float: left;
+	width: 100%;
+	font-size: 1.5em;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.gamesectionbutton {
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.gamesectionbutton button {
+	background-color: #00a7ac;
+	border: none;
+	padding: 2%;
+	width: 50%;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 1.25em;
+}
+
+.dasAwesomeh1 {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Source Sans Pro';
+  font-size: 2em;
+  margin-left: 10%;
+  margin-bottom: 2%;
+}
+
+.blueLine {
+  background-color: #00f8ff;
+  height: 4px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2%;
+}
+
+.items {
+  width: 25%;
+  float: left;
+}
+
+.aboutText {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Source Sans Pro';
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 4%;
+  text-indent: 50px;
+}
+
+.createaccount input {
+  border: none;
+  font-family: 'Source Sans Pro';
+  color: #ffffff;
+  font-size: 1.1vw;
+  background-color: #7F7F7F;
+  padding: 1%;
+  margin-left: 10%;
+  margin-bottom: 2%;
+}
+
+.createaccount .error {
+  font-family: 'Source Sans Pro';
+  color: #ffffff;
+  font-size: 1.1vw;
+  margin-left: 20%;
+  margin-bottom: 2%;
+}
+
+#submitButton {
+  width: 25.5%;
+}
+
+#resetButton {
+  width: 25.5%;
+  margin-left: 2%;
+}
+
+#loginButton {
+  width: 25%;
+  font-size: 1.2vw;
+}
+
+.tryAgain {
+  margin-left: 10%;
+  font-family: 'Source Sans Pro';
+  color: #ffffff;
+  padding: 1%;
+}
+
+.loginForm p {
+  margin-left: 10%;
+  font-family: 'Source Sans Pro';
+  color: #ffffff;
+  padding: 1%;
+}
+
+.loginForm input {
+  border: none;
+  background-color: #7F7F7F;
+  font-family: 'Source Sans Pro';
+  font-size: 1.05vw;
+  color: #ffffff;
+  padding: 1%;
+}
+
+.emailsent {
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+  padding-bottom: 2%;
+
+}
+
+.contactForm {
+  margin-left: 10%;
+  padding-bottom: 3%;
+}
+
+.contactForm input {
+  border: none;
+  background-color: #7F7F7F;
+  font-family: 'Source Sans Pro';
+  font-size: 1.05vw;
+  color: #ffffff;
+  width: 50%;
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.contactForm textarea {
+  border: none;
+  background-color: #7F7F7F;
+  font-family: 'Source Sans Pro';
+  font-size: 1.05vw;
+  width: 50%;
+  color: #ffffff;
+  padding: 1%;
+  margin-bottom: 2%;
+}
+
+.contactForm #reset {
+  border: none;
+  background-color: #7F7F7F;
+  font-family: 'Source Sans Pro';
+  font-size: 1.05vw;
+  width: 24.5%;
+  color: #ffffff;
+  padding: 1%;
+  margin-right: 2.5%;
+}
+
+.contactForm #submit {
+  border: none;
+  background-color: #7F7F7F;
+  font-family: 'Source Sans Pro';
+  font-size: 1.05vw;
+  width: 24.5%;
+  color: #ffffff;
+  padding: 1%;
+}
+
+.updatecart {
+  background-color: #00a7ac;
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+  font-size: 1em;
+  border: none;
+  padding: 1%;
+}
+
+.productbox {
+	width: 90%;
+	float: left;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	margin-left: 3%;
+	margin-right: 3%;
+}
+
+.productimage {
+	width: 46%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+
+}
+
+.productinfo {
+	width: 46%;
+	float: left;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.objecttitle {
+	width: 100%;
+	float: left;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 2.75em;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.objectprice {
+	width: 100%;
+	float: left;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 2em;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.objectdev {
+	width: 100%;
+	float: left;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 2em;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.esrb {
+	width: 25%;
+	float: left;
+	margin-top: 145px;
+}
+
+#addtocartbutton {
+	width: 60%;
+	float: left;
+	margin-top: 190px;
+	margin-left: 15%;
+}
+
+#addtocartbutton button {
+	background-color: #00a7ac;
+	border: none;
+	padding: 2%;
+	margin: 5%;
+	width: 50%;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 1.25em;
+}
+
+.productdescription {
+	width: 90%;
+	float: left;
+	margin-left: 5%;
+	margin-right: 5%;
+	color: #ffffff;
+	font-family: 'Source Sans Pro';
+	font-size: 1.25em;
+	text-indent: 50px;
+	margin-bottom: 5%;
+}
+
+.centerFont {
+  color: #ffffff;
+  width: 90%;
+  padding-left: 10%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-family: 'Source Sans Pro';
+}
+
+.biggerlogo {
+  width: 35%;
+  float: left;
+}
+
+.logo {
+  width: 100%;
+  float: left;
+}
+
+.toplinks {
+  width: 50%;
+  padding-left: 15%;
+  margin-top: 10%;
+  float: left;
+}
+
+.youare {
+  width: 42%;
+  padding-left: 23%;
+  margin-top: 20px;
+  float: left;
+}
+
+.hereyouare {
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+}
+
+.loggedout {
+  padding-bottom: 20px;
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+  margin-left: 10%;
+}
+
+/*Footer Styles*/
+
+.footerlinks {
+	width: 94%;
+	float: left;
+	margin: 3%;
+}
+
+.footerlinks table tr, td {
+	padding: 10px;
+}
+
+.footerlinks a {
+	font-size: 1.5em;
+}
+
+.footerlinks a:hover {
+	text-decoration: underline;
+}
+
+.top {
+	color: #ffffff;
+ 	text-decoration: none;
+ 	font-family: 'Source Sans Pro';
+ 	font-size: 2em;
+}
+
+.middlelinks {
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.middlelinks a {
+	font-size: 2em;
+	padding-left: 8%;
+}
+
+.middlelinks a:hover {
+	text-decoration: underline;
+}
+
+.social {
+	width: 100%;
+	float: left;
+	margin-top: 3%;
+	margin-bottom: 3%;
+}
+
+.bigfb {
+	width: 28%;
+	float: left;
+	margin-left: 15%;
+}
+
+.fblogo {
+  float: left;
+  display: table-cell;
+  vertical-align: bottom;
+  width: 137px;
+  height: 136px;
+  background-image: url('../images/fblogo.png');
+  background-repeat: no-repeat;
+  text-decoration: none;
+  text-align: center;
+}
+ 
+a.fblogo:hover {
+  background-position: -137px 0;
+}
+
+.bigin {
+	width: 28%;
+	float: left;
+}
+
+.inlogo {
+  float: left;
+  display: table-cell;
+  vertical-align: bottom;
+  width: 137px;
+  height: 136px;
+  background-image: url('../images/inlogo.png');
+  background-repeat: no-repeat;
+  text-decoration: none;
+  text-align: center;
+}
+ 
+a.inlogo:hover {
+  background-position: -137px 0;
+}
+
+.bigt {
+	width: 28%;
+	float: left;
+}
+
+.tlogo {
+  float: left;
+  display: table-cell;
+  vertical-align: bottom;
+  width: 137px;
+  height: 136px;
+  background-image: url('../images/tlogo.png');
+  background-repeat: no-repeat;
+  text-decoration: none;
+  text-align: center;
+}
+ 
+a.tlogo:hover {
+  background-position: -137px 0;
+}
